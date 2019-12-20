@@ -8,3 +8,4 @@ RUN git clone --recursive https://github.com/pytorch/pytorch && \
 COPY mm_release /workspace/mm_release
 RUN easy_install /workspace/mm_release/DGPTCUDA-0.0.0-py3.6-linux-x86_64.egg
 RUN easy_install /workspace/mm_release/mmcudnnsvc-0.0.1b0-py3.6-linux-x86_64.egg
+RUN pip list |grep torch
