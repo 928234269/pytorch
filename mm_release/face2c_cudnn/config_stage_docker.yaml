@@ -1,0 +1,35 @@
+config:
+  server_id: "stage_v100"
+  upscale: 2
+  grayscale_noise_strength: 0.01
+  disable_noise: False
+
+  post_noise_for_all: True
+  remote_resize: True
+
+  max_face_count: 20
+  split_batch_size: 2
+
+
+  dface:
+    blur_threshold: 775
+    method: mtcnn
+    mtcnn_path: '../modules/mtcnn_pytorch/src/weights'
+    small_face_size: 256
+    tiny_face_size: 40
+    mtcnn_thresholds: [0.6, 0.7, 0.95]
+    mtcnn_nms_thresholds: [0.7, 0.7, 0.7]
+
+  face_net:    
+    init_sigma: 2.6
+    valid_sigma: 0.9
+    base_sigma: 15
+
+    enable_output_mask: True
+    enable_output_mask_full: False
+
+  bg_net:
+    valid_sigma: 0.4
+    base_sigma: 15
+
+    use_base: True
